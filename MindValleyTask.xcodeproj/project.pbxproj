@@ -9,14 +9,13 @@
 /* Begin PBXBuildFile section */
 		7ED95E62AAABC9BF85AD1779 /* Pods_MindValleyTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 930FBE9C2A6F2C37AD887197 /* Pods_MindValleyTask.framework */; };
 		B70C607E24C196AF00803F4B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C607D24C196AF00803F4B /* AppDelegate.swift */; };
-		B70C608024C196AF00803F4B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C607F24C196AF00803F4B /* SceneDelegate.swift */; };
-		B70C608224C196AF00803F4B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C608124C196AF00803F4B /* ViewController.swift */; };
 		B70C608524C196AF00803F4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B70C608324C196AF00803F4B /* Main.storyboard */; };
 		B70C608724C196B000803F4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B70C608624C196B000803F4B /* Assets.xcassets */; };
 		B70C608A24C196B000803F4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B70C608824C196B000803F4B /* LaunchScreen.storyboard */; };
 		B70C609524C196B100803F4B /* MindValleyTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C609424C196B100803F4B /* MindValleyTaskTests.swift */; };
 		B70C60A224C1AFEA00803F4B /* BaseAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60A124C1AFEA00803F4B /* BaseAPIService.swift */; };
 		B70C60A424C1B04A00803F4B /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60A324C1B04900803F4B /* Endpoint.swift */; };
+		B70C60A624C1B3A700803F4B /* BaseAPIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60A524C1B3A700803F4B /* BaseAPIServiceError.swift */; };
 		EB56E1E014CBDB202252174A /* Pods_MindValleyTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2B8F0B54C33B4EBCF4E5E8 /* Pods_MindValleyTaskTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,8 +37,6 @@
 		930FBE9C2A6F2C37AD887197 /* Pods_MindValleyTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MindValleyTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B70C607A24C196AF00803F4B /* MindValleyTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MindValleyTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B70C607D24C196AF00803F4B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B70C607F24C196AF00803F4B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B70C608124C196AF00803F4B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B70C608424C196AF00803F4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B70C608624C196B000803F4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B70C608924C196B000803F4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +46,7 @@
 		B70C609624C196B100803F4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B70C60A124C1AFEA00803F4B /* BaseAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIService.swift; sourceTree = "<group>"; };
 		B70C60A324C1B04900803F4B /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		B70C60A524C1B3A700803F4B /* BaseAPIServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIServiceError.swift; sourceTree = "<group>"; };
 		C298EA0285A71C4FBD344700 /* Pods-MindValleyTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyTask.debug.xcconfig"; path = "Target Support Files/Pods-MindValleyTask/Pods-MindValleyTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,14 +113,10 @@
 		B70C607C24C196AF00803F4B /* MindValleyTask */ = {
 			isa = PBXGroup;
 			children = (
+				B70C60A924C1B4F000803F4B /* Resources */,
+				B70C60A824C1B4AB00803F4B /* Storyboards */,
+				B70C60A724C1B46C00803F4B /* Application */,
 				B70C609F24C1AFB100803F4B /* Services */,
-				B70C607D24C196AF00803F4B /* AppDelegate.swift */,
-				B70C607F24C196AF00803F4B /* SceneDelegate.swift */,
-				B70C608124C196AF00803F4B /* ViewController.swift */,
-				B70C608324C196AF00803F4B /* Main.storyboard */,
-				B70C608624C196B000803F4B /* Assets.xcassets */,
-				B70C608824C196B000803F4B /* LaunchScreen.storyboard */,
-				B70C608B24C196B000803F4B /* Info.plist */,
 			);
 			path = MindValleyTask;
 			sourceTree = "<group>";
@@ -149,8 +143,35 @@
 			children = (
 				B70C60A124C1AFEA00803F4B /* BaseAPIService.swift */,
 				B70C60A324C1B04900803F4B /* Endpoint.swift */,
+				B70C60A524C1B3A700803F4B /* BaseAPIServiceError.swift */,
 			);
 			path = BaseService;
+			sourceTree = "<group>";
+		};
+		B70C60A724C1B46C00803F4B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B70C607D24C196AF00803F4B /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B70C60A824C1B4AB00803F4B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B70C608324C196AF00803F4B /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B70C60A924C1B4F000803F4B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B70C608824C196B000803F4B /* LaunchScreen.storyboard */,
+				B70C608B24C196B000803F4B /* Info.plist */,
+				B70C608624C196B000803F4B /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,10 +342,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B70C608224C196AF00803F4B /* ViewController.swift in Sources */,
 				B70C60A224C1AFEA00803F4B /* BaseAPIService.swift in Sources */,
+				B70C60A624C1B3A700803F4B /* BaseAPIServiceError.swift in Sources */,
 				B70C607E24C196AF00803F4B /* AppDelegate.swift in Sources */,
-				B70C608024C196AF00803F4B /* SceneDelegate.swift in Sources */,
 				B70C60A424C1B04A00803F4B /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,10 +437,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = MindValleyTask/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = omima.MindValleyTask;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -471,9 +493,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = MindValleyTask/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = omima.MindValleyTask;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -487,12 +511,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MindValleyTask/Info.plist;
+				INFOPLIST_FILE = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = omima.MindValleyTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -505,12 +528,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = MindValleyTask/Info.plist;
+				INFOPLIST_FILE = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = omima.MindValleyTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

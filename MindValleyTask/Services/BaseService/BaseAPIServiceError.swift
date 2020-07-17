@@ -10,12 +10,12 @@ import Foundation
 
 enum BaseAPIServiceError: LocalizedError {
     case parsingError
-    case serverError(message: String, code: Int)
+    case serverError(message: String)
     
     var errorDescription: String? {
         switch self {
         case .parsingError: return "JSON Parsing Failure"
-        case .serverError(let message, let code): return "\(message)<\(code)>"
+        case .serverError(let message): return "\(message)"
         }
     }
 }

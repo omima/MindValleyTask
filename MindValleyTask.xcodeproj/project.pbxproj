@@ -16,6 +16,16 @@
 		B70C60A224C1AFEA00803F4B /* BaseAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60A124C1AFEA00803F4B /* BaseAPIService.swift */; };
 		B70C60A424C1B04A00803F4B /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60A324C1B04900803F4B /* Endpoint.swift */; };
 		B70C60A624C1B3A700803F4B /* BaseAPIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60A524C1B3A700803F4B /* BaseAPIServiceError.swift */; };
+		B70C60BE24C1C1F500803F4B /* ChannelsAPIDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60B124C1C1F500803F4B /* ChannelsAPIDataManager.swift */; };
+		B70C60BF24C1C1F500803F4B /* ChannelsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60B324C1C1F500803F4B /* ChannelsPresenter.swift */; };
+		B70C60C024C1C1F500803F4B /* ChannelsWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60B524C1C1F500803F4B /* ChannelsWireFrame.swift */; };
+		B70C60C124C1C1F500803F4B /* ChannelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60B724C1C1F500803F4B /* ChannelsView.swift */; };
+		B70C60C224C1C1F500803F4B /* ChannelsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60B924C1C1F500803F4B /* ChannelsProtocols.swift */; };
+		B70C60C324C1C1F500803F4B /* ChannelsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60BB24C1C1F500803F4B /* ChannelsInteractor.swift */; };
+		B70C60CD24C1E69700803F4B /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60CC24C1E69700803F4B /* Media.swift */; };
+		B70C60CF24C1E6C000803F4B /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60CE24C1E6C000803F4B /* Channel.swift */; };
+		B70C60D124C2CEDE00803F4B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60D024C2CEDE00803F4B /* Category.swift */; };
+		B70C60D324C2FE6300803F4B /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60D224C2FE6300803F4B /* Series.swift */; };
 		EB56E1E014CBDB202252174A /* Pods_MindValleyTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2B8F0B54C33B4EBCF4E5E8 /* Pods_MindValleyTaskTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +57,16 @@
 		B70C60A124C1AFEA00803F4B /* BaseAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIService.swift; sourceTree = "<group>"; };
 		B70C60A324C1B04900803F4B /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		B70C60A524C1B3A700803F4B /* BaseAPIServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIServiceError.swift; sourceTree = "<group>"; };
+		B70C60B124C1C1F500803F4B /* ChannelsAPIDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsAPIDataManager.swift; sourceTree = "<group>"; };
+		B70C60B324C1C1F500803F4B /* ChannelsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsPresenter.swift; sourceTree = "<group>"; };
+		B70C60B524C1C1F500803F4B /* ChannelsWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsWireFrame.swift; sourceTree = "<group>"; };
+		B70C60B724C1C1F500803F4B /* ChannelsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsView.swift; sourceTree = "<group>"; };
+		B70C60B924C1C1F500803F4B /* ChannelsProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsProtocols.swift; sourceTree = "<group>"; };
+		B70C60BB24C1C1F500803F4B /* ChannelsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsInteractor.swift; sourceTree = "<group>"; };
+		B70C60CC24C1E69700803F4B /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		B70C60CE24C1E6C000803F4B /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		B70C60D024C2CEDE00803F4B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		B70C60D224C2FE6300803F4B /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
 		C298EA0285A71C4FBD344700 /* Pods-MindValleyTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyTask.debug.xcconfig"; path = "Target Support Files/Pods-MindValleyTask/Pods-MindValleyTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +133,8 @@
 		B70C607C24C196AF00803F4B /* MindValleyTask */ = {
 			isa = PBXGroup;
 			children = (
+				B70C60C724C1E1D800803F4B /* Models */,
+				B70C60AA24C1C12300803F4B /* Modules */,
 				B70C60A924C1B4F000803F4B /* Resources */,
 				B70C60A824C1B4AB00803F4B /* Storyboards */,
 				B70C60A724C1B46C00803F4B /* Application */,
@@ -172,6 +194,38 @@
 				B70C608624C196B000803F4B /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B70C60AA24C1C12300803F4B /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B70C60AC24C1C1F500803F4B /* Channels */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B70C60AC24C1C1F500803F4B /* Channels */ = {
+			isa = PBXGroup;
+			children = (
+				B70C60B124C1C1F500803F4B /* ChannelsAPIDataManager.swift */,
+				B70C60B324C1C1F500803F4B /* ChannelsPresenter.swift */,
+				B70C60B524C1C1F500803F4B /* ChannelsWireFrame.swift */,
+				B70C60B724C1C1F500803F4B /* ChannelsView.swift */,
+				B70C60B924C1C1F500803F4B /* ChannelsProtocols.swift */,
+				B70C60BB24C1C1F500803F4B /* ChannelsInteractor.swift */,
+			);
+			path = Channels;
+			sourceTree = "<group>";
+		};
+		B70C60C724C1E1D800803F4B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B70C60CC24C1E69700803F4B /* Media.swift */,
+				B70C60CE24C1E6C000803F4B /* Channel.swift */,
+				B70C60D024C2CEDE00803F4B /* Category.swift */,
+				B70C60D224C2FE6300803F4B /* Series.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,10 +396,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B70C60CD24C1E69700803F4B /* Media.swift in Sources */,
+				B70C60CF24C1E6C000803F4B /* Channel.swift in Sources */,
+				B70C60C024C1C1F500803F4B /* ChannelsWireFrame.swift in Sources */,
 				B70C60A224C1AFEA00803F4B /* BaseAPIService.swift in Sources */,
+				B70C60C124C1C1F500803F4B /* ChannelsView.swift in Sources */,
 				B70C60A624C1B3A700803F4B /* BaseAPIServiceError.swift in Sources */,
+				B70C60D324C2FE6300803F4B /* Series.swift in Sources */,
+				B70C60BF24C1C1F500803F4B /* ChannelsPresenter.swift in Sources */,
+				B70C60BE24C1C1F500803F4B /* ChannelsAPIDataManager.swift in Sources */,
+				B70C60C224C1C1F500803F4B /* ChannelsProtocols.swift in Sources */,
+				B70C60D124C2CEDE00803F4B /* Category.swift in Sources */,
 				B70C607E24C196AF00803F4B /* AppDelegate.swift in Sources */,
 				B70C60A424C1B04A00803F4B /* Endpoint.swift in Sources */,
+				B70C60C324C1C1F500803F4B /* ChannelsInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

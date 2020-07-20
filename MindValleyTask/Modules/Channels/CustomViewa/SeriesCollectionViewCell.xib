@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SeriesCollectionViewCell" customModule="MindValleyTask" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="298"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="330" height="298"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUK-Ri-zmI">
+                        <rect key="frame" x="0.0" y="0.0" width="330" height="298"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E9I-gH-LmX">
+                                <rect key="frame" x="5" y="5" width="320" height="178"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="178" id="6sS-o3-fhN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEJ-AP-a60">
+                                <rect key="frame" x="5" y="193" width="320" height="20"/>
+                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LEJ-AP-a60" firstAttribute="top" secondItem="E9I-gH-LmX" secondAttribute="bottom" constant="10" id="38O-BF-IU2"/>
+                            <constraint firstItem="E9I-gH-LmX" firstAttribute="leading" secondItem="UUK-Ri-zmI" secondAttribute="leading" constant="5" id="Bgh-EJ-sPy"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LEJ-AP-a60" secondAttribute="bottom" constant="20" id="IHw-gP-3Qv"/>
+                            <constraint firstAttribute="trailing" secondItem="LEJ-AP-a60" secondAttribute="trailing" constant="5" id="RKp-bA-ARM"/>
+                            <constraint firstAttribute="trailing" secondItem="E9I-gH-LmX" secondAttribute="trailing" constant="5" id="Rai-Af-bH8"/>
+                            <constraint firstItem="E9I-gH-LmX" firstAttribute="top" secondItem="UUK-Ri-zmI" secondAttribute="top" constant="5" id="ZAu-0H-xaB"/>
+                            <constraint firstItem="LEJ-AP-a60" firstAttribute="leading" secondItem="UUK-Ri-zmI" secondAttribute="leading" constant="5" id="sz1-dd-ql1"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="UUK-Ri-zmI" secondAttribute="bottom" id="4n1-KC-hzR"/>
+                <constraint firstAttribute="trailing" secondItem="UUK-Ri-zmI" secondAttribute="trailing" id="Ngf-zN-AiV"/>
+                <constraint firstItem="UUK-Ri-zmI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="S2s-y4-Nd7"/>
+                <constraint firstItem="UUK-Ri-zmI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="z9g-Yd-WTd"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="330" height="298"/>
+            <connections>
+                <outlet property="image" destination="E9I-gH-LmX" id="elY-Ds-cHN"/>
+                <outlet property="title" destination="LEJ-AP-a60" id="Ezw-Am-Qik"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="192.1875"/>
+        </collectionViewCell>
+    </objects>
+</document>

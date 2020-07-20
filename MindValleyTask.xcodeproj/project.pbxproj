@@ -26,6 +26,15 @@
 		B70C60CF24C1E6C000803F4B /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60CE24C1E6C000803F4B /* Channel.swift */; };
 		B70C60D124C2CEDE00803F4B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60D024C2CEDE00803F4B /* Category.swift */; };
 		B70C60D324C2FE6300803F4B /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60D224C2FE6300803F4B /* Series.swift */; };
+		B70C60D624C362C700803F4B /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B70C60D524C362C700803F4B /* Roboto-Regular.ttf */; };
+		B70C60D824C363E100803F4B /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B70C60D724C363E100803F4B /* Roboto-Bold.ttf */; };
+		B70C60DC24C368F600803F4B /* MediaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60DA24C368F600803F4B /* MediaCollectionViewCell.swift */; };
+		B70C60DD24C368F600803F4B /* MediaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B70C60DB24C368F600803F4B /* MediaCollectionViewCell.xib */; };
+		B70C60E024C43FD500803F4B /* ChannelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60DE24C43FD500803F4B /* ChannelTableViewCell.swift */; };
+		B70C60E124C43FD500803F4B /* ChannelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B70C60DF24C43FD500803F4B /* ChannelTableViewCell.xib */; };
+		B70C60E324C4496E00803F4B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B70C60E224C4496E00803F4B /* Roboto-Medium.ttf */; };
+		B70C60EA24C464D900803F4B /* SeriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60E824C464D900803F4B /* SeriesCollectionViewCell.swift */; };
+		B70C60EB24C464D900803F4B /* SeriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B70C60E924C464D900803F4B /* SeriesCollectionViewCell.xib */; };
 		EB56E1E014CBDB202252174A /* Pods_MindValleyTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2B8F0B54C33B4EBCF4E5E8 /* Pods_MindValleyTaskTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +76,15 @@
 		B70C60CE24C1E6C000803F4B /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		B70C60D024C2CEDE00803F4B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		B70C60D224C2FE6300803F4B /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
+		B70C60D524C362C700803F4B /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		B70C60D724C363E100803F4B /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		B70C60DA24C368F600803F4B /* MediaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCollectionViewCell.swift; sourceTree = "<group>"; };
+		B70C60DB24C368F600803F4B /* MediaCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaCollectionViewCell.xib; sourceTree = "<group>"; };
+		B70C60DE24C43FD500803F4B /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCell.swift; sourceTree = "<group>"; };
+		B70C60DF24C43FD500803F4B /* ChannelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelTableViewCell.xib; sourceTree = "<group>"; };
+		B70C60E224C4496E00803F4B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		B70C60E824C464D900803F4B /* SeriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		B70C60E924C464D900803F4B /* SeriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeriesCollectionViewCell.xib; sourceTree = "<group>"; };
 		C298EA0285A71C4FBD344700 /* Pods-MindValleyTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyTask.debug.xcconfig"; path = "Target Support Files/Pods-MindValleyTask/Pods-MindValleyTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +151,7 @@
 		B70C607C24C196AF00803F4B /* MindValleyTask */ = {
 			isa = PBXGroup;
 			children = (
+				B70C60D424C3627600803F4B /* Fonts */,
 				B70C60C724C1E1D800803F4B /* Models */,
 				B70C60AA24C1C12300803F4B /* Modules */,
 				B70C60A924C1B4F000803F4B /* Resources */,
@@ -207,6 +226,7 @@
 		B70C60AC24C1C1F500803F4B /* Channels */ = {
 			isa = PBXGroup;
 			children = (
+				B70C60D924C368CD00803F4B /* CustomViewa */,
 				B70C60B124C1C1F500803F4B /* ChannelsAPIDataManager.swift */,
 				B70C60B324C1C1F500803F4B /* ChannelsPresenter.swift */,
 				B70C60B524C1C1F500803F4B /* ChannelsWireFrame.swift */,
@@ -226,6 +246,29 @@
 				B70C60D224C2FE6300803F4B /* Series.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B70C60D424C3627600803F4B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B70C60D724C363E100803F4B /* Roboto-Bold.ttf */,
+				B70C60D524C362C700803F4B /* Roboto-Regular.ttf */,
+				B70C60E224C4496E00803F4B /* Roboto-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		B70C60D924C368CD00803F4B /* CustomViewa */ = {
+			isa = PBXGroup;
+			children = (
+				B70C60DE24C43FD500803F4B /* ChannelTableViewCell.swift */,
+				B70C60DF24C43FD500803F4B /* ChannelTableViewCell.xib */,
+				B70C60DA24C368F600803F4B /* MediaCollectionViewCell.swift */,
+				B70C60DB24C368F600803F4B /* MediaCollectionViewCell.xib */,
+				B70C60E824C464D900803F4B /* SeriesCollectionViewCell.swift */,
+				B70C60E924C464D900803F4B /* SeriesCollectionViewCell.xib */,
+			);
+			path = CustomViewa;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,9 +355,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B70C60E324C4496E00803F4B /* Roboto-Medium.ttf in Resources */,
 				B70C608A24C196B000803F4B /* LaunchScreen.storyboard in Resources */,
+				B70C60DD24C368F600803F4B /* MediaCollectionViewCell.xib in Resources */,
 				B70C608724C196B000803F4B /* Assets.xcassets in Resources */,
+				B70C60D824C363E100803F4B /* Roboto-Bold.ttf in Resources */,
+				B70C60D624C362C700803F4B /* Roboto-Regular.ttf in Resources */,
 				B70C608524C196AF00803F4B /* Main.storyboard in Resources */,
+				B70C60E124C43FD500803F4B /* ChannelTableViewCell.xib in Resources */,
+				B70C60EB24C464D900803F4B /* SeriesCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B70C60CD24C1E69700803F4B /* Media.swift in Sources */,
+				B70C60E024C43FD500803F4B /* ChannelTableViewCell.swift in Sources */,
 				B70C60CF24C1E6C000803F4B /* Channel.swift in Sources */,
 				B70C60C024C1C1F500803F4B /* ChannelsWireFrame.swift in Sources */,
 				B70C60A224C1AFEA00803F4B /* BaseAPIService.swift in Sources */,
@@ -404,8 +454,10 @@
 				B70C60A624C1B3A700803F4B /* BaseAPIServiceError.swift in Sources */,
 				B70C60D324C2FE6300803F4B /* Series.swift in Sources */,
 				B70C60BF24C1C1F500803F4B /* ChannelsPresenter.swift in Sources */,
+				B70C60EA24C464D900803F4B /* SeriesCollectionViewCell.swift in Sources */,
 				B70C60BE24C1C1F500803F4B /* ChannelsAPIDataManager.swift in Sources */,
 				B70C60C224C1C1F500803F4B /* ChannelsProtocols.swift in Sources */,
+				B70C60DC24C368F600803F4B /* MediaCollectionViewCell.swift in Sources */,
 				B70C60D124C2CEDE00803F4B /* Category.swift in Sources */,
 				B70C607E24C196AF00803F4B /* AppDelegate.swift in Sources */,
 				B70C60A424C1B04A00803F4B /* Endpoint.swift in Sources */,

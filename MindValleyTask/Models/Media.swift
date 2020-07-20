@@ -32,6 +32,9 @@ struct Media : Codable {
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
+        title = try values.decode(String.self, forKey: .title)
+        type = try values.decode(String.self, forKey: .type)
+        
         let cover = try values.nestedContainer(keyedBy: coverkey.self, forKey: .coverImage)
         coverImage = try cover.decode(String.self, forKey: .coverImage)
         
@@ -40,3 +43,5 @@ struct Media : Codable {
         
     }
 }
+
+

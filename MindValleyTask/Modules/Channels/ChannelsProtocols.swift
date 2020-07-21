@@ -31,16 +31,10 @@ protocol ChannelsInteractorOutputProtocol: class {
 // MARK: Presenter -> Interactor
 protocol ChannelsInteractorInputProtocol: class {
     var presenter: ChannelsInteractorOutputProtocol? { get set }
-    var APIDataManager: ChannelsAPIDataManagerInputProtocol? { get set }
 }
 
 // MARK:- Wireframe Protocols
 protocol ChannelsWireFrameProtocol: class {
     static func createChannelsView() -> ChannelsView
-}
-
-// MARK:- APIDATAMANAGER Protocols
-protocol ChannelsAPIDataManagerInputProtocol: class {
-    
 }
 

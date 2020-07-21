@@ -12,8 +12,13 @@ class ChannelsInteractor {
     
     // MARK:- Properties
     weak var presenter: ChannelsInteractorOutputProtocol?
-    var APIDataManager: ChannelsAPIDataManagerInputProtocol?
+    private let service: ChannelApiService
 
+    // MARK:- Initializers
+    init(service: ChannelApiService) {
+        self.service = service
+    }
+    
 }
 
 // MARK:- ChannelsInteractorInputProtocol

@@ -23,8 +23,8 @@ class ChannelsWireFrame: ChannelsWireFrameProtocol {
         // Generating module components
         let view = storyBoard.instantiateViewController(withIdentifier: Constants.viewIdentifier) as! ChannelsView
         let presenter: ChannelsPresenterProtocol & ChannelsInteractorOutputProtocol = ChannelsPresenter()
-        let interactor: ChannelsInteractorInputProtocol = ChannelsInteractor()
-        let apiDataManager: ChannelsAPIDataManagerInputProtocol = ChannelsAPIDataManager()
+        let service = ChannelApiService()
+        let interactor: ChannelsInteractorInputProtocol = ChannelsInteractor(service: service)
         let wireFrame: ChannelsWireFrameProtocol = ChannelsWireFrame()
         
         // Connecting
@@ -33,7 +33,6 @@ class ChannelsWireFrame: ChannelsWireFrameProtocol {
         presenter.wireFrame = wireFrame
         presenter.interactor = interactor
         interactor.presenter = presenter
-        interactor.APIDataManager = apiDataManager
         
         return view
     }

@@ -11,8 +11,6 @@ import Alamofire
 
 class BaseAPIService {
     
-    static let sharedInstance = BaseAPIService()
-
     public enum HTTPMethod : String{
         case get = "GET"
         case post = "POST"

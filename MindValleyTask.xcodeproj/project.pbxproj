@@ -16,7 +16,6 @@
 		B70C60A224C1AFEA00803F4B /* BaseAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60A124C1AFEA00803F4B /* BaseAPIService.swift */; };
 		B70C60A424C1B04A00803F4B /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60A324C1B04900803F4B /* Endpoint.swift */; };
 		B70C60A624C1B3A700803F4B /* BaseAPIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60A524C1B3A700803F4B /* BaseAPIServiceError.swift */; };
-		B70C60BE24C1C1F500803F4B /* ChannelsAPIDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60B124C1C1F500803F4B /* ChannelsAPIDataManager.swift */; };
 		B70C60BF24C1C1F500803F4B /* ChannelsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60B324C1C1F500803F4B /* ChannelsPresenter.swift */; };
 		B70C60C024C1C1F500803F4B /* ChannelsWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60B524C1C1F500803F4B /* ChannelsWireFrame.swift */; };
 		B70C60C124C1C1F500803F4B /* ChannelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60B724C1C1F500803F4B /* ChannelsView.swift */; };
@@ -35,6 +34,10 @@
 		B70C60E324C4496E00803F4B /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B70C60E224C4496E00803F4B /* Roboto-Medium.ttf */; };
 		B70C60EA24C464D900803F4B /* SeriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60E824C464D900803F4B /* SeriesCollectionViewCell.swift */; };
 		B70C60EB24C464D900803F4B /* SeriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B70C60E924C464D900803F4B /* SeriesCollectionViewCell.xib */; };
+		B70C60ED24C5F13F00803F4B /* CategoryWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60EC24C5F13F00803F4B /* CategoryWrapper.swift */; };
+		B70C60EF24C5F15900803F4B /* ChannelWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60EE24C5F15900803F4B /* ChannelWrapper.swift */; };
+		B70C60F124C5F17300803F4B /* MediaWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60F024C5F17300803F4B /* MediaWrapper.swift */; };
+		B70C60F324C60F4800803F4B /* ChannelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60F224C60F4800803F4B /* ChannelService.swift */; };
 		EB56E1E014CBDB202252174A /* Pods_MindValleyTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2B8F0B54C33B4EBCF4E5E8 /* Pods_MindValleyTaskTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +69,6 @@
 		B70C60A124C1AFEA00803F4B /* BaseAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIService.swift; sourceTree = "<group>"; };
 		B70C60A324C1B04900803F4B /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		B70C60A524C1B3A700803F4B /* BaseAPIServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPIServiceError.swift; sourceTree = "<group>"; };
-		B70C60B124C1C1F500803F4B /* ChannelsAPIDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsAPIDataManager.swift; sourceTree = "<group>"; };
 		B70C60B324C1C1F500803F4B /* ChannelsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsPresenter.swift; sourceTree = "<group>"; };
 		B70C60B524C1C1F500803F4B /* ChannelsWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsWireFrame.swift; sourceTree = "<group>"; };
 		B70C60B724C1C1F500803F4B /* ChannelsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelsView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,10 @@
 		B70C60E224C4496E00803F4B /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		B70C60E824C464D900803F4B /* SeriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		B70C60E924C464D900803F4B /* SeriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeriesCollectionViewCell.xib; sourceTree = "<group>"; };
+		B70C60EC24C5F13F00803F4B /* CategoryWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryWrapper.swift; sourceTree = "<group>"; };
+		B70C60EE24C5F15900803F4B /* ChannelWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelWrapper.swift; sourceTree = "<group>"; };
+		B70C60F024C5F17300803F4B /* MediaWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaWrapper.swift; sourceTree = "<group>"; };
+		B70C60F224C60F4800803F4B /* ChannelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelService.swift; sourceTree = "<group>"; };
 		C298EA0285A71C4FBD344700 /* Pods-MindValleyTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyTask.debug.xcconfig"; path = "Target Support Files/Pods-MindValleyTask/Pods-MindValleyTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -175,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				B70C60A024C1AFC300803F4B /* BaseService */,
+				B70C60F224C60F4800803F4B /* ChannelService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -226,8 +233,7 @@
 		B70C60AC24C1C1F500803F4B /* Channels */ = {
 			isa = PBXGroup;
 			children = (
-				B70C60D924C368CD00803F4B /* CustomViewa */,
-				B70C60B124C1C1F500803F4B /* ChannelsAPIDataManager.swift */,
+				B70C60D924C368CD00803F4B /* CustomViews */,
 				B70C60B324C1C1F500803F4B /* ChannelsPresenter.swift */,
 				B70C60B524C1C1F500803F4B /* ChannelsWireFrame.swift */,
 				B70C60B724C1C1F500803F4B /* ChannelsView.swift */,
@@ -240,8 +246,11 @@
 		B70C60C724C1E1D800803F4B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B70C60F024C5F17300803F4B /* MediaWrapper.swift */,
 				B70C60CC24C1E69700803F4B /* Media.swift */,
+				B70C60EE24C5F15900803F4B /* ChannelWrapper.swift */,
 				B70C60CE24C1E6C000803F4B /* Channel.swift */,
+				B70C60EC24C5F13F00803F4B /* CategoryWrapper.swift */,
 				B70C60D024C2CEDE00803F4B /* Category.swift */,
 				B70C60D224C2FE6300803F4B /* Series.swift */,
 			);
@@ -258,7 +267,7 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		B70C60D924C368CD00803F4B /* CustomViewa */ = {
+		B70C60D924C368CD00803F4B /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
 				B70C60DE24C43FD500803F4B /* ChannelTableViewCell.swift */,
@@ -268,7 +277,7 @@
 				B70C60E824C464D900803F4B /* SeriesCollectionViewCell.swift */,
 				B70C60E924C464D900803F4B /* SeriesCollectionViewCell.xib */,
 			);
-			path = CustomViewa;
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -448,15 +457,18 @@
 				B70C60CD24C1E69700803F4B /* Media.swift in Sources */,
 				B70C60E024C43FD500803F4B /* ChannelTableViewCell.swift in Sources */,
 				B70C60CF24C1E6C000803F4B /* Channel.swift in Sources */,
+				B70C60EF24C5F15900803F4B /* ChannelWrapper.swift in Sources */,
 				B70C60C024C1C1F500803F4B /* ChannelsWireFrame.swift in Sources */,
 				B70C60A224C1AFEA00803F4B /* BaseAPIService.swift in Sources */,
 				B70C60C124C1C1F500803F4B /* ChannelsView.swift in Sources */,
 				B70C60A624C1B3A700803F4B /* BaseAPIServiceError.swift in Sources */,
+				B70C60ED24C5F13F00803F4B /* CategoryWrapper.swift in Sources */,
 				B70C60D324C2FE6300803F4B /* Series.swift in Sources */,
 				B70C60BF24C1C1F500803F4B /* ChannelsPresenter.swift in Sources */,
 				B70C60EA24C464D900803F4B /* SeriesCollectionViewCell.swift in Sources */,
-				B70C60BE24C1C1F500803F4B /* ChannelsAPIDataManager.swift in Sources */,
 				B70C60C224C1C1F500803F4B /* ChannelsProtocols.swift in Sources */,
+				B70C60F124C5F17300803F4B /* MediaWrapper.swift in Sources */,
+				B70C60F324C60F4800803F4B /* ChannelService.swift in Sources */,
 				B70C60DC24C368F600803F4B /* MediaCollectionViewCell.swift in Sources */,
 				B70C60D124C2CEDE00803F4B /* Category.swift in Sources */,
 				B70C607E24C196AF00803F4B /* AppDelegate.swift in Sources */,

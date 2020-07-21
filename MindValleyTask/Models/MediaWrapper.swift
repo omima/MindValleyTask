@@ -8,22 +8,11 @@
 
 import Foundation
 
-struct MediaWrapper : Decodable {
-    var list : [Media]
-
-    enum CodingKeys : String , CodingKey {
-        case data
-    }
+struct MediaWrapper : Codable {
     
-    enum MediaCodingKeys : String , CodingKey {
+    var list : [Media]
+    
+    enum CodingKeys : String , CodingKey {
         case list = "media"
     }
-    
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        let contanier = try values.nestedContainer(keyedBy: MediaCodingKeys.self, forKey: .data)
-        
-        list = try contanier.decode([Media].self, forKey: .list)
-    }
-    
 }

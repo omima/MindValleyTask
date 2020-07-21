@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct Series : Decodable {
+struct Series : Codable {
     var title : String
     var image : String
-    var type : String // for latestMedia
+    var type : String? // for latestMedia
     
     enum CodingKeys: String, CodingKey {
         case title
@@ -25,10 +25,15 @@ struct Series : Decodable {
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-       
+        
         title = try values.decode(String.self, forKey: .title)
-        type = try values.decode(String.self, forKey: .type)
-
+        
+        if values.contains(.type){
+            type = try values.decode(String.self, forKey: .type)
+        }else{
+            self.type = nil
+        }
+        
         let cover = try values.nestedContainer(keyedBy: coverkey.self, forKey: .image)
         image = try cover.decode(String.self, forKey: .image)
     }

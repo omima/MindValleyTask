@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Category : Decodable {
+struct Category : Codable {
     var name : String
     
     enum CodingKeys: String, CodingKey {

@@ -25,6 +25,9 @@ class ChannelsView: UIViewController {
     // MARK:- UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter?.viewLoaded()
+        registerCell()
+
     }
     // MARK:- Methods
     // MARK: Public Methods

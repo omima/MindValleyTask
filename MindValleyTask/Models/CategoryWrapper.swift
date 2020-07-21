@@ -8,22 +8,10 @@
 
 import Foundation
 
-struct CategoryWrapper : Decodable {
+struct CategoryWrapper : Codable {
     var categories : [Category]
 
     enum CodingKeys : String , CodingKey {
-        case data
-    }
-    
-    enum CategoryCodingKeys : String , CodingKey {
         case categories
     }
-    
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        let contanier = try values.nestedContainer(keyedBy: CategoryCodingKeys.self, forKey: .data)
-        
-        categories = try contanier.decode([Category].self, forKey: .categories)
-    }
-    
 }

@@ -38,6 +38,7 @@
 		B70C60EF24C5F15900803F4B /* ChannelWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60EE24C5F15900803F4B /* ChannelWrapper.swift */; };
 		B70C60F124C5F17300803F4B /* MediaWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60F024C5F17300803F4B /* MediaWrapper.swift */; };
 		B70C60F324C60F4800803F4B /* ChannelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70C60F224C60F4800803F4B /* ChannelService.swift */; };
+		B7E5885424C7131400A5E7CF /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E5885324C7131400A5E7CF /* Response.swift */; };
 		EB56E1E014CBDB202252174A /* Pods_MindValleyTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2B8F0B54C33B4EBCF4E5E8 /* Pods_MindValleyTaskTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		B70C60EE24C5F15900803F4B /* ChannelWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelWrapper.swift; sourceTree = "<group>"; };
 		B70C60F024C5F17300803F4B /* MediaWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaWrapper.swift; sourceTree = "<group>"; };
 		B70C60F224C60F4800803F4B /* ChannelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelService.swift; sourceTree = "<group>"; };
+		B7E5885324C7131400A5E7CF /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		C298EA0285A71C4FBD344700 /* Pods-MindValleyTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyTask.debug.xcconfig"; path = "Target Support Files/Pods-MindValleyTask/Pods-MindValleyTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -246,6 +248,7 @@
 		B70C60C724C1E1D800803F4B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B7E5885324C7131400A5E7CF /* Response.swift */,
 				B70C60F024C5F17300803F4B /* MediaWrapper.swift */,
 				B70C60CC24C1E69700803F4B /* Media.swift */,
 				B70C60EE24C5F15900803F4B /* ChannelWrapper.swift */,
@@ -467,6 +470,7 @@
 				B70C60BF24C1C1F500803F4B /* ChannelsPresenter.swift in Sources */,
 				B70C60EA24C464D900803F4B /* SeriesCollectionViewCell.swift in Sources */,
 				B70C60C224C1C1F500803F4B /* ChannelsProtocols.swift in Sources */,
+				B7E5885424C7131400A5E7CF /* Response.swift in Sources */,
 				B70C60F124C5F17300803F4B /* MediaWrapper.swift in Sources */,
 				B70C60F324C60F4800803F4B /* ChannelService.swift in Sources */,
 				B70C60DC24C368F600803F4B /* MediaCollectionViewCell.swift in Sources */,

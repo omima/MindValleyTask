@@ -20,7 +20,9 @@ class ChannelsPresenter {
 
 // MARK:- ChannelsPresenterProtocol
 extension ChannelsPresenter: ChannelsPresenterProtocol {
-    
+    func viewLoaded() {
+        interactor?.loadChannels()
+    }
 }
 
 // MARK:- ChannelsInteractorOutputProtocol

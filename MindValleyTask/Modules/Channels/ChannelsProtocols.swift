@@ -20,6 +20,9 @@ protocol ChannelsPresenterProtocol: class {
     var view: ChannelsViewProtocol? { get set }
     var interactor: ChannelsInteractorInputProtocol? { get set }
     var wireFrame: ChannelsWireFrameProtocol? { get set }
+    
+    func viewLoaded()
+
 }
 
 // MARK: Interactor -> Presenter
@@ -31,6 +34,8 @@ protocol ChannelsInteractorOutputProtocol: class {
 // MARK: Presenter -> Interactor
 protocol ChannelsInteractorInputProtocol: class {
     var presenter: ChannelsInteractorOutputProtocol? { get set }
+    func loadChannels() 
+
 }
 
 // MARK:- Wireframe Protocols

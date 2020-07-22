@@ -27,7 +27,9 @@ protocol ChannelsPresenterProtocol: class {
 
 // MARK: Interactor -> Presenter
 protocol ChannelsInteractorOutputProtocol: class {
-    
+    func channelsUpdated()
+    func loadStateUpdated(isLoading: Bool)
+    func errorOccured(error: Error)
 }
 
 // MARK:- Interactor Protocols

@@ -27,5 +27,17 @@ extension ChannelsPresenter: ChannelsPresenterProtocol {
 
 // MARK:- ChannelsInteractorOutputProtocol
 extension ChannelsPresenter: ChannelsInteractorOutputProtocol {
+    func channelsUpdated() {
+        
+    }
+    
+    func loadStateUpdated(isLoading: Bool) {
+        
+    }
+    
+    func errorOccured(error: Error) {
+        
+    }
+    
     
 }

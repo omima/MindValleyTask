@@ -7,7 +7,9 @@ target 'MindValleyTask' do
 
   pod 'Alamofire'
   pod 'Kingfisher'
-
+  pod 'SwiftMessages', '5.0.0'
+  pod 'GeometricLoaders'
+  
   # Pods for MindValleyTask
 
   target 'MindValleyTaskTests' do

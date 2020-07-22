@@ -10,7 +10,7 @@ import Foundation
 
 struct Series : Codable {
     var title : String
-    var image : String
+    var image : URL?
     var type : String? // for latestMedia
     
     enum CodingKeys: String, CodingKey {
@@ -35,7 +35,7 @@ struct Series : Codable {
         }
         
         let cover = try values.nestedContainer(keyedBy: coverkey.self, forKey: .image)
-        image = try cover.decode(String.self, forKey: .image)
+        image = try? cover.decode(URL.self, forKey: .image)
     }
 }
 

@@ -18,4 +18,11 @@ class SeriesCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
+    func configure(with item : Series) {
+        if let imageURL = item.image {
+            image.kf.setImage(with: imageURL)
+        }
+        title.text = item.title
+    }
+    
 }

@@ -11,7 +11,7 @@ import Foundation
 struct Media : Codable {
     var type: String
     var title: String
-    var coverImage:String
+    var coverImage:URL?
     var channelName : String
     
     enum CodingKeys: String, CodingKey {
@@ -36,7 +36,7 @@ struct Media : Codable {
         type = try values.decode(String.self, forKey: .type)
         
         let cover = try values.nestedContainer(keyedBy: coverkey.self, forKey: .coverImage)
-        coverImage = try cover.decode(String.self, forKey: .coverImage)
+        coverImage = try? cover.decode(URL.self, forKey: .coverImage)
         
         let channelTitle = try values.nestedContainer(keyedBy: channelTitlekey.self, forKey: .channelName)
         channelName = try channelTitle.decode(String.self, forKey: .channelName)

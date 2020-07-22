@@ -18,5 +18,23 @@ class MediaCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    func configure(with item : Series) {
+        if let imageURL = item.image {
+            imageView.kf.setImage(with: imageURL)
+        }
+        titleLabel.text = item.title
+        descriptionLabel.text = ""
+    }
+    
+    
+    func configureMedia(with item : Media) {
+        if let imageURL = item.coverImage {
+            imageView.kf.setImage(with: imageURL)
+        }
+        titleLabel.text = item.title
+        descriptionLabel.text = item.channelName
+    }
+    
 
 }

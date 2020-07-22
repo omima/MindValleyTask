@@ -37,59 +37,59 @@ extension ChannelsInteractor: ChannelsInteractorInputProtocol {
         getNewEpisodes{
             dispatchGroup.leave()
         }
-        
         getChannel{
             dispatchGroup.leave()
         }
-        
         getCategory{
             dispatchGroup.leave()
         }
-        
         dispatchGroup.notify(queue: .main ){
             self.presenter?.channelsUpdated() // add view model
         }
     }
     
+   
+}
+extension ChannelsInteractor {
     func getNewEpisodes(completion: @escaping () -> ()) {
-        service.fetchNewEpisodes { (result) in
-            switch result {
-            case .success(let response):
-                self.newEpisodesList = response.data?.list ?? []
-                completion()
-            case .failure(let error):
-                self.presenter?.errorOccured(error: error)
-                completion()
-            }
-        }
-    }
-    
-    func getChannel(completion: @escaping () -> ())  {
-        service.fetchChannel { (result) in
-            switch result {
-            case .success(let response):
-                self.channelList = response.data?.channels ?? []
-                completion()
-                
-            case .failure(let error):
-                print(error)
-                self.presenter?.errorOccured(error: error)
-            }
-        }
-    }
-    
-    func getCategory(completion: @escaping () -> ()) {
-        
-        service.fetchCategory { (result) in
-            switch result {
-            case .success(let response):
-                self.categoryList = response.data?.categories ?? []
-                completion()
-            case .failure(let error):
-                self.presenter?.errorOccured(error: error)
-                completion()
-                
-            }
-        }
-    }
+           service.fetchNewEpisodes { (result) in
+               switch result {
+               case .success(let response):
+                   self.newEpisodesList = response.data?.list ?? []
+                   completion()
+               case .failure(let error):
+                   self.presenter?.errorOccured(error: error)
+                   completion()
+               }
+           }
+       }
+       
+       func getChannel(completion: @escaping () -> ())  {
+           service.fetchChannel { (result) in
+               switch result {
+               case .success(let response):
+                   self.channelList = response.data?.channels ?? []
+                   completion()
+                   
+               case .failure(let error):
+                   print(error)
+                   self.presenter?.errorOccured(error: error)
+               }
+           }
+       }
+       
+       func getCategory(completion: @escaping () -> ()) {
+           
+           service.fetchCategory { (result) in
+               switch result {
+               case .success(let response):
+                   self.categoryList = response.data?.categories ?? []
+                   completion()
+               case .failure(let error):
+                   self.presenter?.errorOccured(error: error)
+                   completion()
+                   
+               }
+           }
+       }
 }

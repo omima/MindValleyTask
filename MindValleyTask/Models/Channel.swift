@@ -14,7 +14,7 @@ struct  Channel : Codable {
     var mediaCount : Int
     var latestMedia : [Series]
     var coverImage : String?
-    var iconImage : String?
+    var iconImage : URL?
     
     enum CodingKeys: String, CodingKey {
         case title = "title"
@@ -52,9 +52,9 @@ struct  Channel : Codable {
         let icon = try? values.nestedContainer(keyedBy: iconkey.self, forKey: .iconImage)
         let iconContainer = try? values.nestedContainer(keyedBy: iconCodingKey.self, forKey: .iconImage)
        
-        if let icon =  try icon?.decodeIfPresent(String.self, forKey: .iconImage) {
+        if let icon =  try icon?.decodeIfPresent(URL.self, forKey: .iconImage) {
             iconImage = icon
-        }else if let icon =  try iconContainer?.decodeIfPresent(String.self, forKey: .iconImage){
+        }else if let icon =  try iconContainer?.decodeIfPresent(URL.self, forKey: .iconImage){
            iconImage  = icon
         }else {
             iconImage = nil

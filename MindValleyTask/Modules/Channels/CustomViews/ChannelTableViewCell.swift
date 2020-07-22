@@ -7,38 +7,51 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ChannelTableViewCell: UITableViewCell {
-   
+    
     // MARK:- Constants
     struct Constants {
         static let mediaCellIdentifier = "MediaCollectionViewCell"
         static let seriesCellIdentifier = "SeriesCollectionViewCell"
-
+        
     }
     // MARK: Outlets
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var mediaView: UIView!
-
-    
-    @IBOutlet weak var episodView: UIView!
-    
     @IBOutlet weak var collectionView: UICollectionView!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionView.delegate = self
         collectionView.dataSource = self
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
+    
+    func configureChannel(with item: Channel) {
+        
+        titleLabel.text = item.title
+        descriptionLabel.text = "\(item.mediaCount)"
+        if let imageURL = item.iconImage {
+            iconView.kf.setImage(with: imageURL)
+        }
+        if item.series.isEmpty {
+            
+        }else{
+            
+        }
+        
+        
+    }
 }
 
 extension ChannelTableViewCell : UICollectionViewDelegate , UICollectionViewDataSource {
@@ -54,4 +67,10 @@ extension ChannelTableViewCell : UICollectionViewDelegate , UICollectionViewData
     }
     
     
+}
+
+struct MediaViewModel {
+    var title : String
+    var dec : String
+    var image : URL?
 }

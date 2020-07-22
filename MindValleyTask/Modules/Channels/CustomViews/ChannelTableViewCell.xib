@@ -28,7 +28,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WM5-Bi-Q5e">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="172"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cMP-2h-vQI">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
@@ -39,6 +39,11 @@
                                                     <constraint firstAttribute="height" constant="50" id="6ZE-De-oDH"/>
                                                     <constraint firstAttribute="width" constant="50" id="RKo-ha-lkF"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ByI-Bq-tp1">
                                                 <rect key="frame" x="85" y="26" width="230" height="20"/>
@@ -67,28 +72,10 @@
                                             <constraint firstAttribute="trailing" secondItem="D4V-Dg-BGt" secondAttribute="trailing" constant="5" id="shG-di-t3i"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tST-Bh-0Op">
-                                        <rect key="frame" x="0.0" y="86" width="320" height="86"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Episodes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8q-mT-02y">
-                                                <rect key="frame" x="20" y="31.5" width="295" height="23.5"/>
-                                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
-                                                <color key="textColor" red="0.58431372549019611" green="0.59607843137254901" blue="0.61568627450980395" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="Q8q-mT-02y" firstAttribute="centerY" secondItem="tST-Bh-0Op" secondAttribute="centerY" id="5Xd-OE-wB0"/>
-                                            <constraint firstAttribute="trailing" secondItem="Q8q-mT-02y" secondAttribute="trailing" constant="5" id="Jip-FL-HB1"/>
-                                            <constraint firstItem="Q8q-mT-02y" firstAttribute="leading" secondItem="tST-Bh-0Op" secondAttribute="leading" constant="20" id="fyl-Ga-d7M"/>
-                                            <constraint firstAttribute="height" constant="86" id="ijS-wf-bKy"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NKJ-vD-e2w">
-                                <rect key="frame" x="0.0" y="172" width="320" height="228"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="314"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YuT-2p-7bp">
                                     <size key="itemSize" width="128" height="128"/>
@@ -121,7 +108,6 @@
             <connections>
                 <outlet property="collectionView" destination="NKJ-vD-e2w" id="rqX-hP-s7h"/>
                 <outlet property="descriptionLabel" destination="D4V-Dg-BGt" id="8s8-My-yJJ"/>
-                <outlet property="episodView" destination="tST-Bh-0Op" id="6YA-CA-w1M"/>
                 <outlet property="iconView" destination="NID-re-xXx" id="2QB-n2-d9K"/>
                 <outlet property="mediaView" destination="cMP-2h-vQI" id="3na-g2-tus"/>
                 <outlet property="titleLabel" destination="ByI-Bq-tp1" id="cwm-pU-HAm"/>

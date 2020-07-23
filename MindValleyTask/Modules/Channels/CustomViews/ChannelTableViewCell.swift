@@ -14,13 +14,16 @@ enum ChannelType {
     case media
 }
 
+protocol ChannelCellDelegate: class {
+    func shouldUpadteViewLayout()
+}
+
 class ChannelTableViewCell: UITableViewCell {
     
     // MARK:- Constants
     struct Constants {
         static let mediaCellIdentifier = "MediaCollectionViewCell"
         static let seriesCellIdentifier = "SeriesCollectionViewCell"
-        
     }
     // MARK: Outlets
     @IBOutlet weak var iconView: UIImageView!
@@ -31,30 +34,24 @@ class ChannelTableViewCell: UITableViewCell {
     
     var media = [Series]()
     var channelType : ChannelType = .media
+    weak var delegate : ChannelCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-       setupCollection()
+        setupCollection()
         registerCell()
     }
     
     // MARK: Private Methods
     fileprivate func setupCollection() {
         collectionView.delegate = self
-               collectionView.dataSource = self
-        
-        let flowLayout = UICollectionViewFlowLayout()
-         flowLayout.scrollDirection = .horizontal
-         flowLayout.itemSize = CGSize(width: 150, height: 290)
-         flowLayout.minimumLineSpacing = 2.0
-         flowLayout.minimumInteritemSpacing = 5.0
-         self.collectionView.collectionViewLayout = flowLayout
-         self.collectionView.showsHorizontalScrollIndicator = false
+        collectionView.dataSource = self
+        self.collectionView.showsHorizontalScrollIndicator = false
     }
     
     fileprivate func registerCell() {
-        let MediaCell = UINib(nibName: "MediaCollectionViewCell", bundle: nil)
-        self.collectionView.register(MediaCell, forCellWithReuseIdentifier: "MediaCollectionViewCell")
+        let mediaCell = UINib(nibName: "MediaCollectionViewCell", bundle: nil)
+        self.collectionView.register(mediaCell, forCellWithReuseIdentifier: "MediaCollectionViewCell")
         let seriesCell = UINib(nibName: "SeriesCollectionViewCell", bundle: nil)
         self.collectionView.register(seriesCell, forCellWithReuseIdentifier: "SeriesCollectionViewCell")
     }
@@ -76,15 +73,19 @@ class ChannelTableViewCell: UITableViewCell {
             channelType = .media
             self.media =  item.latestMedia
             descriptionLabel.text = "\(item.mediaCount) episodes"
+            collectionView.reloadData()
         }else{
             channelType = .series
             self.media =  item.series
             descriptionLabel.text = "\(item.mediaCount) series"
-        }        
+            collectionView.reloadData()
+        }
+        
+        delegate?.shouldUpadteViewLayout()
     }
 }
 
-extension ChannelTableViewCell : UICollectionViewDelegate , UICollectionViewDataSource {
+extension ChannelTableViewCell : UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return media.count
     }
@@ -95,7 +96,7 @@ extension ChannelTableViewCell : UICollectionViewDelegate , UICollectionViewData
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.mediaCellIdentifier, for: indexPath as IndexPath) as! MediaCollectionViewCell
             cell.configure(with: media[indexPath.row])
             return cell
-         case .series:
+        case .series:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.seriesCellIdentifier, for: indexPath as IndexPath) as! SeriesCollectionViewCell
             cell.configure(with: media[indexPath.row])
             return cell
@@ -104,14 +105,25 @@ extension ChannelTableViewCell : UICollectionViewDelegate , UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-           return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-       }
+        return UIEdgeInsets(top: 5, left: 5, bottom: 0, right: 5)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        switch channelType {
+        case .media:
+            return CGSize(width: (self.frame.width / 2 - 22) , height: (self.frame.width + 100))
+        case .series:
+            return CGSize(width: (self.frame.width - 20) , height: (self.frame.width - 120))
+            
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return  5
+    }
     
 }
-
-struct MediaViewModel {
-    var title : String
-    var dec : String
-    var image : URL?
-}
-

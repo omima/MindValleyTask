@@ -14,7 +14,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FooterView" customModule="MindValleyTask" customModuleProvider="target">
             <connections>
-                <outlet property="collectionView" destination="Ve2-cH-BIS" id="yGr-gO-Fg5"/>
+                <outlet property="collectionHeightConstraint" destination="qrH-GH-fnc" id="aUQ-Qq-CCY"/>
+                <outlet property="collectionView" destination="Ve2-cH-BIS" id="gWl-5Q-gzb"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -46,6 +47,9 @@
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ve2-cH-BIS">
                             <rect key="frame" x="0.0" y="86" width="414" height="104"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="104" id="qrH-GH-fnc"/>
+                            </constraints>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Om9-iT-XCy">
                                 <size key="itemSize" width="128" height="128"/>
                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>

@@ -17,4 +17,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
+    func configure(with item : Category)  {
+        categoryTitle.text = item.name
+    }
 }

@@ -44,7 +44,11 @@ class ChannelsView: BaseViewController {
         tableView.sizeHeaderToFit()
         
         tableView.tableFooterView = footerView
+        footerView.delegte = self
         tableView.sizeFooterToFit()
+        
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 600
     }
 }
 
@@ -52,6 +56,9 @@ class ChannelsView: BaseViewController {
 extension ChannelsView: ChannelsViewProtocol {
     func reloadData() {
         tableView.reloadData()
+        tableView.sizeHeaderToFit()
+        tableView.sizeFooterToFit()
+        
     }
 }
 
@@ -63,12 +70,28 @@ extension ChannelsView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier) as! ChannelTableViewCell
+        cell.delegate = self
         cell.configureChannel(with: presenter!.getChannelItem(at: indexPath.row))
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 400
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return UITableView.automaticDimension
     }
+    
+}
+ 
+extension ChannelsView: FooterViewDelegate {
+    func shouldUpdateViewLayout() {
+        tableView.sizeFooterToFit()
+    }
+}
 
+extension ChannelsView: ChannelCellDelegate {
+    func shouldUpadteViewLayout() {
+        tableView.beginUpdates()
+        tableView.endUpdates()
+    }
+    
+    
 }

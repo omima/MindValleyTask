@@ -47,9 +47,10 @@ extension ChannelsPresenter: ChannelsPresenterProtocol {
 // MARK:- ChannelsInteractorOutputProtocol
 extension ChannelsPresenter: ChannelsInteractorOutputProtocol {
     func channelsUpdated() {
-        view?.reloadData()
         view?.headerView.configureNewEpisodes(with: getNewEpisodes())
         view?.footerView.configureCategory(with: getCategoryList())
+        view?.reloadData()
+
     }
     
     func loadStateUpdated(isLoading: Bool) {

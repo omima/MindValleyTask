@@ -110,6 +110,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="collectionView" destination="NKJ-vD-e2w" id="rqX-hP-s7h"/>
+                <outlet property="collectionViewHeight" destination="SJX-db-QNK" id="0P2-4B-sbg"/>
                 <outlet property="descriptionLabel" destination="D4V-Dg-BGt" id="8s8-My-yJJ"/>
                 <outlet property="iconView" destination="NID-re-xXx" id="2QB-n2-d9K"/>
                 <outlet property="mediaView" destination="cMP-2h-vQI" id="3na-g2-tus"/>

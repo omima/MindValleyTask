@@ -24,6 +24,7 @@ class ChannelTableViewCell: UITableViewCell {
     struct Constants {
         static let mediaCellIdentifier = "MediaCollectionViewCell"
         static let seriesCellIdentifier = "SeriesCollectionViewCell"
+        static let minCellHeight: CGFloat = 200
     }
     // MARK: Outlets
     @IBOutlet weak var iconView: UIImageView!
@@ -31,11 +32,13 @@ class ChannelTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var mediaView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    var media = [Series]()
+    @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
+
     var channelType : ChannelType = .media
     weak var delegate : ChannelCellDelegate?
-    
+    var media = [Series]()
+   fileprivate var cellHeight: CGFloat = Constants.minCellHeight
+
     override func awakeFromNib() {
         super.awakeFromNib()
         setupCollection()
@@ -73,14 +76,17 @@ class ChannelTableViewCell: UITableViewCell {
             channelType = .media
             self.media =  item.latestMedia
             descriptionLabel.text = "\(item.mediaCount) episodes"
+          
+            cellHeight = max(media.map{ MediaCollectionViewCell.height(item: $0, width: (self.frame.width / 2 - 22)) }.max() ?? 0, Constants.minCellHeight)
+            collectionViewHeight?.constant = cellHeight
             collectionView.reloadData()
         }else{
             channelType = .series
             self.media =  item.series
             descriptionLabel.text = "\(item.mediaCount) series"
             collectionView.reloadData()
+            collectionViewHeight.constant = 260
         }
-        
         delegate?.shouldUpadteViewLayout()
     }
 }
@@ -111,9 +117,9 @@ extension ChannelTableViewCell : UICollectionViewDelegate , UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch channelType {
         case .media:
-            return CGSize(width: (self.frame.width / 2 - 22) , height: (self.frame.width + 100))
+            return CGSize(width: (self.frame.width / 2 - 22) , height: cellHeight)
         case .series:
-            return CGSize(width: (self.frame.width - 20) , height: (self.frame.width - 120))
+            return CGSize(width: (self.frame.width - 20) , height: 260)
             
         }
     }

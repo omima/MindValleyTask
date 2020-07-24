@@ -17,3 +17,28 @@ extension UIView {
         }
     }
 }
+
+
+extension String {
+    func height(withWidth width: CGFloat, font: UIFont) -> CGFloat {
+         let maxSize = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
+        let actualSize = self.boundingRect(with: maxSize, options: [.usesLineFragmentOrigin], attributes: [NSAttributedString.Key.font : font], context: nil)
+         return actualSize.height
+     }
+     
+
+}
+
+extension UIFont {
+    static func robotoRegular(size: CGFloat) -> UIFont? {
+        return UIFont(name: "Roboto-Regular", size: size)
+    }
+    
+    static func robotoSemiBold(size: CGFloat) -> UIFont? {
+        return UIFont(name: "Roboto-Medium", size: size)
+    }
+    
+    static func robotoBold(size: CGFloat) -> UIFont {
+        return UIFont(name: "Roboto-Bold", size: size)!
+    }
+}

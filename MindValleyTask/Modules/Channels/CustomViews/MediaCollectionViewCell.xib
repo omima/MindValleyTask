@@ -25,7 +25,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="160" height="375"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ieK-W8-yvX">
-                                <rect key="frame" x="5" y="20" width="150" height="230"/>
+                                <rect key="frame" x="5" y="10" width="150" height="230"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="230" id="haM-NT-QOx"/>
                                 </constraints>
@@ -36,13 +36,13 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="label labellabellabellabel  labellabellabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvP-pd-o8S">
-                                <rect key="frame" x="5" y="260" width="150" height="56.5"/>
+                                <rect key="frame" x="5" y="250" width="150" height="56.5"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvj-E3-60x">
-                                <rect key="frame" x="5" y="321.5" width="150" height="15.5"/>
+                                <rect key="frame" x="5" y="311.5" width="150" height="15.5"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="13"/>
                                 <color key="textColor" red="0.58431372549019611" green="0.59607843137254901" blue="0.61568627450980395" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -50,15 +50,15 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ieK-W8-yvX" firstAttribute="centerX" secondItem="WDV-rJ-NMM" secondAttribute="centerX" id="15g-b9-HcC"/>
                             <constraint firstAttribute="trailing" secondItem="EvP-pd-o8S" secondAttribute="trailing" constant="5" id="34g-Qr-MGE"/>
                             <constraint firstItem="ieK-W8-yvX" firstAttribute="leading" secondItem="WDV-rJ-NMM" secondAttribute="leading" constant="5" id="9uo-zD-vpJ"/>
                             <constraint firstItem="dvj-E3-60x" firstAttribute="leading" secondItem="WDV-rJ-NMM" secondAttribute="leading" constant="5" id="BwD-pT-KNT"/>
                             <constraint firstItem="EvP-pd-o8S" firstAttribute="top" secondItem="ieK-W8-yvX" secondAttribute="bottom" constant="10" id="EGU-Pl-h5s"/>
                             <constraint firstItem="dvj-E3-60x" firstAttribute="top" secondItem="EvP-pd-o8S" secondAttribute="bottom" constant="5" id="Gs9-2J-qc4"/>
-                            <constraint firstItem="ieK-W8-yvX" firstAttribute="top" secondItem="WDV-rJ-NMM" secondAttribute="top" constant="20" id="RjW-jB-JIM"/>
                             <constraint firstAttribute="trailing" secondItem="dvj-E3-60x" secondAttribute="trailing" constant="5" id="U5b-yb-kGV"/>
+                            <constraint firstItem="ieK-W8-yvX" firstAttribute="top" secondItem="WDV-rJ-NMM" secondAttribute="top" constant="10" id="VKM-Hf-EE2"/>
                             <constraint firstAttribute="trailing" secondItem="ieK-W8-yvX" secondAttribute="trailing" constant="5" id="WhY-JL-HV8"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dvj-E3-60x" secondAttribute="bottom" constant="3" id="lAU-mP-xIS"/>
                             <constraint firstItem="EvP-pd-o8S" firstAttribute="leading" secondItem="WDV-rJ-NMM" secondAttribute="leading" constant="5" id="yOq-Ez-bJE"/>
                         </constraints>
                     </view>

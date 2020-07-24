@@ -89,6 +89,7 @@ extension ChannelsView: FooterViewDelegate {
 
 extension ChannelsView: ChannelCellDelegate {
     func shouldUpadteViewLayout() {
+        self.view.layoutIfNeeded()
         tableView.beginUpdates()
         tableView.endUpdates()
     }

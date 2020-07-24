@@ -13,6 +13,7 @@ class HeaderView: UIView {
     // MARK:- Constants
     struct Constants {
         static let mediaCellIdentifier = "MediaCollectionViewCell"
+        static let minCellHeight: CGFloat = 200
     }
     
     // MARK: Outlets
@@ -20,7 +21,8 @@ class HeaderView: UIView {
     @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
     
     var mediaList = [Media]()
-    
+    fileprivate var cellHeight: CGFloat = Constants.minCellHeight
+
     // MARK:- Methods
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -57,6 +59,8 @@ class HeaderView: UIView {
     func configureNewEpisodes(with items : [Media])  {
         mediaList = items
         collectionView.reloadData()
+        cellHeight = max(mediaList.map{ MediaCollectionViewCell.heightMedia(item: $0, width: (self.frame.width / 2 - 22)) }.max() ?? 0, Constants.minCellHeight)
+        collectionViewHeightConstraint?.constant = cellHeight
     }
 }
 
@@ -73,10 +77,10 @@ extension HeaderView : UICollectionViewDelegate , UICollectionViewDataSource , U
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (self.frame.width / 2 - 22) , height: (self.frame.width))
+        return CGSize(width: (self.frame.width / 2 - 22) , height:  collectionViewHeightConstraint.constant )
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 10)
+        return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
     }
 }

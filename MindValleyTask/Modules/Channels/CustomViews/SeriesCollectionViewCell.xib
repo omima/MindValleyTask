@@ -15,19 +15,19 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SeriesCollectionViewCell" customModule="MindValleyTask" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="330" height="248"/>
+            <rect key="frame" x="0.0" y="0.0" width="330" height="260"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="330" height="248"/>
+                <rect key="frame" x="0.0" y="0.0" width="330" height="260"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UUK-Ri-zmI">
-                        <rect key="frame" x="0.0" y="0.0" width="330" height="248"/>
+                        <rect key="frame" x="0.0" y="0.0" width="330" height="260"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E9I-gH-LmX">
-                                <rect key="frame" x="5" y="5" width="320" height="208"/>
+                                <rect key="frame" x="5" y="5" width="320" height="178"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="Jvs-yj-TDx"/>
+                                    <constraint firstAttribute="height" constant="178" id="hnN-MU-7HX"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -36,7 +36,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEJ-AP-a60">
-                                <rect key="frame" x="5" y="223" width="320" height="20"/>
+                                <rect key="frame" x="5" y="193" width="320" height="20"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -46,7 +46,7 @@
                         <constraints>
                             <constraint firstItem="LEJ-AP-a60" firstAttribute="top" secondItem="E9I-gH-LmX" secondAttribute="bottom" constant="10" id="38O-BF-IU2"/>
                             <constraint firstItem="E9I-gH-LmX" firstAttribute="leading" secondItem="UUK-Ri-zmI" secondAttribute="leading" constant="5" id="Bgh-EJ-sPy"/>
-                            <constraint firstAttribute="bottom" secondItem="LEJ-AP-a60" secondAttribute="bottom" constant="5" id="IHw-gP-3Qv"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LEJ-AP-a60" secondAttribute="bottom" constant="10" id="CZV-cQ-QU2"/>
                             <constraint firstAttribute="trailing" secondItem="LEJ-AP-a60" secondAttribute="trailing" constant="5" id="RKp-bA-ARM"/>
                             <constraint firstAttribute="trailing" secondItem="E9I-gH-LmX" secondAttribute="trailing" constant="5" id="Rai-Af-bH8"/>
                             <constraint firstItem="E9I-gH-LmX" firstAttribute="top" secondItem="UUK-Ri-zmI" secondAttribute="top" constant="5" id="ZAu-0H-xaB"/>

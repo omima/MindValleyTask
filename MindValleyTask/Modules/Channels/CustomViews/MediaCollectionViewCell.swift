@@ -36,5 +36,26 @@ class MediaCollectionViewCell: UICollectionViewCell {
         descriptionLabel.text = item.channelName
     }
     
+    static func height(item: Series, width: CGFloat) -> CGFloat {
+        
+        let textWidth = width - 15
+        var height: CGFloat = 0
+        
+        height += item.title.height(withWidth: textWidth, font: UIFont.robotoBold(size: 17)) + 5
+        height += 230 // image hieght
+        return height
+    }
+    
+    static func heightMedia(item: Media, width: CGFloat) -> CGFloat {
+        
+        let textWidth = width - 15
+        var height: CGFloat = 0
+        
+        height += item.title.height(withWidth: textWidth, font: UIFont.robotoBold(size: 17))
+        height += item.channelName.height(withWidth: textWidth, font: UIFont.robotoBold(size: 13))
+        
+        height += 230 // image hieght
+        return height
+    }
 
 }

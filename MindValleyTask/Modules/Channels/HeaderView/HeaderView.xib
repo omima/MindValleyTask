@@ -26,11 +26,28 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cqq-gw-oV0">
                     <rect key="frame" x="0.0" y="44" width="414" height="367"/>
                     <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bi-Ie-EH9">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Channels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoN-QS-jsJ">
+                                    <rect key="frame" x="20" y="22.5" width="126" height="35.5"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="30"/>
+                                    <color key="textColor" red="0.58431372550000005" green="0.59607843140000005" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="2z3-c1-ZG2"/>
+                                <constraint firstItem="RoN-QS-jsJ" firstAttribute="centerY" secondItem="1bi-Ie-EH9" secondAttribute="centerY" id="qRP-YH-C8D"/>
+                                <constraint firstItem="RoN-QS-jsJ" firstAttribute="leading" secondItem="1bi-Ie-EH9" secondAttribute="leading" constant="20" id="rCH-QC-7VU"/>
+                            </constraints>
+                        </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xV8-rX-sAF">
-                            <rect key="frame" x="0.0" y="0.0" width="151.5" height="86"/>
+                            <rect key="frame" x="0.0" y="80" width="151.5" height="50"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Episodes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z95-hk-lzz">
-                                    <rect key="frame" x="20" y="31.5" width="126.5" height="23.5"/>
+                                    <rect key="frame" x="20" y="13.5" width="126.5" height="23.5"/>
                                     <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="20"/>
                                     <color key="textColor" red="0.58431372550000005" green="0.59607843140000005" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -41,14 +58,14 @@
                                 <constraint firstItem="z95-hk-lzz" firstAttribute="centerY" secondItem="xV8-rX-sAF" secondAttribute="centerY" id="7BO-4R-RX9"/>
                                 <constraint firstItem="z95-hk-lzz" firstAttribute="leading" secondItem="xV8-rX-sAF" secondAttribute="leading" constant="20" id="BkT-Fz-Fqx"/>
                                 <constraint firstAttribute="trailing" secondItem="z95-hk-lzz" secondAttribute="trailing" constant="5" id="RmI-ng-QZF"/>
-                                <constraint firstAttribute="height" constant="86" id="ngn-ht-yc6"/>
+                                <constraint firstAttribute="height" constant="50" id="ngn-ht-yc6"/>
                             </constraints>
                         </view>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dcp-S7-XdS">
-                            <rect key="frame" x="0.0" y="86" width="414" height="281"/>
+                            <rect key="frame" x="0.0" y="130" width="414" height="237"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="281" id="kXe-y5-BvJ"/>
+                                <constraint firstAttribute="height" priority="750" constant="281" id="kXe-y5-BvJ"/>
                             </constraints>
                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QMT-og-dAM">
                                 <size key="itemSize" width="128" height="128"/>
@@ -61,15 +78,18 @@
                     <color key="backgroundColor" red="0.13725490200000001" green="0.1529411765" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="dcp-S7-XdS" secondAttribute="trailing" id="1R3-qT-BrI"/>
+                        <constraint firstAttribute="trailing" secondItem="1bi-Ie-EH9" secondAttribute="trailing" id="8ps-bB-Ygr"/>
                         <constraint firstAttribute="bottom" secondItem="dcp-S7-XdS" secondAttribute="bottom" id="GMj-W4-dcA"/>
+                        <constraint firstItem="1bi-Ie-EH9" firstAttribute="top" secondItem="Cqq-gw-oV0" secondAttribute="top" id="Qk9-N2-nFG"/>
                         <constraint firstItem="dcp-S7-XdS" firstAttribute="top" secondItem="xV8-rX-sAF" secondAttribute="bottom" id="UmR-Jg-jHy"/>
+                        <constraint firstItem="xV8-rX-sAF" firstAttribute="top" secondItem="1bi-Ie-EH9" secondAttribute="bottom" id="ZE2-iH-wKa"/>
                         <constraint firstItem="dcp-S7-XdS" firstAttribute="leading" secondItem="Cqq-gw-oV0" secondAttribute="leading" id="bae-l8-rLd"/>
                         <constraint firstItem="xV8-rX-sAF" firstAttribute="leading" secondItem="dcp-S7-XdS" secondAttribute="leading" id="iMs-Gv-JLN"/>
-                        <constraint firstItem="xV8-rX-sAF" firstAttribute="top" secondItem="Cqq-gw-oV0" secondAttribute="top" id="nxM-Mq-FvH"/>
+                        <constraint firstItem="1bi-Ie-EH9" firstAttribute="leading" secondItem="Cqq-gw-oV0" secondAttribute="leading" id="q06-HZ-B2I"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Cqq-gw-oV0" secondAttribute="bottom" id="0jI-Df-k8m"/>
                 <constraint firstAttribute="trailing" secondItem="Cqq-gw-oV0" secondAttribute="trailing" id="9k7-cl-KLk"/>

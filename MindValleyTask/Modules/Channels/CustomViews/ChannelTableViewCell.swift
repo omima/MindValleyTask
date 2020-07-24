@@ -72,9 +72,9 @@ class ChannelTableViewCell: UITableViewCell {
             iconView.kf.setImage(with: imageURL)
         }
         
-        if item.series.isEmpty {
+        if item.series?.isEmpty ?? false {
             channelType = .media
-            self.media =  item.latestMedia
+            self.media =  item.latestMedia ?? []
             descriptionLabel.text = "\(item.mediaCount) episodes"
           
             cellHeight = max(media.map{ MediaCollectionViewCell.height(item: $0, width: (self.frame.width / 2 - 22)) }.max() ?? 0, Constants.minCellHeight)
@@ -82,7 +82,7 @@ class ChannelTableViewCell: UITableViewCell {
             collectionView.reloadData()
         }else{
             channelType = .series
-            self.media =  item.series
+            self.media =  item.series ?? []
             descriptionLabel.text = "\(item.mediaCount) series"
             collectionView.reloadData()
             collectionViewHeight.constant = 260

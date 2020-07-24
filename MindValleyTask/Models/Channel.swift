@@ -10,9 +10,9 @@ import Foundation
 
 struct  Channel : Codable {
     var title : String
-    var series : [Series]
+    var series : [Series]?
     var mediaCount : Int
-    var latestMedia : [Series]
+    var latestMedia : [Series]?
     var coverImage : String?
     var iconImage : URL?
     

@@ -49,6 +49,7 @@
 		B7E5886724C8A80C00A5E7CF /* UITableView+AutoLayoutHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E5886624C8A80C00A5E7CF /* UITableView+AutoLayoutHeader.swift */; };
 		B7E5886924C8AAE700A5E7CF /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E5886824C8AAE700A5E7CF /* FooterView.swift */; };
 		B7E5886C24C8AAFD00A5E7CF /* FooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7E5886B24C8AAFD00A5E7CF /* FooterView.xib */; };
+		B7E5886E24C9E0B400A5E7CF /* Cachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E5886D24C9E0B400A5E7CF /* Cachable.swift */; };
 		EB56E1E014CBDB202252174A /* Pods_MindValleyTaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2B8F0B54C33B4EBCF4E5E8 /* Pods_MindValleyTaskTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +114,7 @@
 		B7E5886624C8A80C00A5E7CF /* UITableView+AutoLayoutHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+AutoLayoutHeader.swift"; sourceTree = "<group>"; };
 		B7E5886824C8AAE700A5E7CF /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		B7E5886B24C8AAFD00A5E7CF /* FooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterView.xib; sourceTree = "<group>"; };
+		B7E5886D24C9E0B400A5E7CF /* Cachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cachable.swift; sourceTree = "<group>"; };
 		C298EA0285A71C4FBD344700 /* Pods-MindValleyTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MindValleyTask.debug.xcconfig"; path = "Target Support Files/Pods-MindValleyTask/Pods-MindValleyTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -313,6 +315,7 @@
 				B7E5885D24C86F4900A5E7CF /* UIView+CornerRadius.swift */,
 				B7E5886424C8A62100A5E7CF /* UIView+xibSetup.swift */,
 				B7E5886624C8A80C00A5E7CF /* UITableView+AutoLayoutHeader.swift */,
+				B7E5886D24C9E0B400A5E7CF /* Cachable.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				B70C60E024C43FD500803F4B /* ChannelTableViewCell.swift in Sources */,
 				B70C60CF24C1E6C000803F4B /* Channel.swift in Sources */,
 				B7E5886724C8A80C00A5E7CF /* UITableView+AutoLayoutHeader.swift in Sources */,
+				B7E5886E24C9E0B400A5E7CF /* Cachable.swift in Sources */,
 				B70C60EF24C5F15900803F4B /* ChannelWrapper.swift in Sources */,
 				B70C60C024C1C1F500803F4B /* ChannelsWireFrame.swift in Sources */,
 				B70C60A224C1AFEA00803F4B /* BaseAPIService.swift in Sources */,

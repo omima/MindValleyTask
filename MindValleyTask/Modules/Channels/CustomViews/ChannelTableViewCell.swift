@@ -68,7 +68,7 @@ class ChannelTableViewCell: UITableViewCell {
     // MARK:  Methods
     func configureChannel(with item: Channel) {
         titleLabel.text = item.title
-        if let imageURL = item.iconImage {
+        if let imageURL = item.iconImage?.image {
             iconView.kf.setImage(with: imageURL)
         }
         

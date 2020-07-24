@@ -11,18 +11,14 @@ import Foundation
 struct Media : Codable {
     var type: String
     var title: String
-    var coverImage:URL?
-    var channelName : String
+    var coverImage:MediaImage?
+    var channelName : ChannalType
     
     enum CodingKeys: String, CodingKey {
-        case type
-        case title
+        case type = "type"
+        case title = "title"
         case coverImage = "coverAsset"
         case channelName = "channel"
-    }
-    
-    enum coverkey : String , CodingKey {
-        case coverImage = "url"
     }
     
     enum channelTitlekey : String , CodingKey {
@@ -34,14 +30,17 @@ struct Media : Codable {
         
         title = try values.decode(String.self, forKey: .title)
         type = try values.decode(String.self, forKey: .type)
-        
-        let cover = try values.nestedContainer(keyedBy: coverkey.self, forKey: .coverImage)
-        coverImage = try? cover.decode(URL.self, forKey: .coverImage)
-        
-        let channelTitle = try values.nestedContainer(keyedBy: channelTitlekey.self, forKey: .channelName)
-        channelName = try channelTitle.decode(String.self, forKey: .channelName)
+        coverImage = try? values.decode(MediaImage.self, forKey: .coverImage)
+        channelName = try values.decode(ChannalType.self, forKey: .channelName)
         
     }
 }
 
 
+struct ChannalType : Codable {
+    var title : String
+    
+    enum CodingKeys : String , CodingKey {
+        case title = "title"
+    }
+}

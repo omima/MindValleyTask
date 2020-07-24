@@ -10,7 +10,7 @@ import Foundation
 
 struct Series : Codable {
     var title : String
-    var image : URL?
+    var image : MediaImage?
     var type : String? // for latestMedia
     
     enum CodingKeys: String, CodingKey {
@@ -33,10 +33,29 @@ struct Series : Codable {
         }else{
             self.type = nil
         }
-        
-        let cover = try values.nestedContainer(keyedBy: coverkey.self, forKey: .image)
-        image = try? cover.decode(URL.self, forKey: .image)
+        image = try? values.decode(MediaImage.self, forKey: .image)
     }
 }
 
 
+struct MediaImage : Codable {
+    var image : URL
+    
+    enum CodingKeys: String, CodingKey {
+        case image = "url"
+    }
+    
+    enum iconkey : String , CodingKey {
+        case image = "thumbnailUrl"
+    }
+    
+    init(from decoder: Decoder) throws {
+        do {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            image = try container.decode(URL.self, forKey: .image)
+        } catch {
+            let container = try decoder.container(keyedBy: iconkey.self)
+            image = try container.decode(URL.self, forKey: .image)
+        }
+    }
+}

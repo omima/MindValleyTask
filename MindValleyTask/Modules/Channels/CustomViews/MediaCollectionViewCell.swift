@@ -20,7 +20,7 @@ class MediaCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(with item : Series) {
-        if let imageURL = item.image {
+        if let imageURL = item.image?.image {
             imageView.kf.setImage(with: imageURL)
         }
         titleLabel.text = item.title
@@ -29,11 +29,11 @@ class MediaCollectionViewCell: UICollectionViewCell {
     
     
     func configureMedia(with item : Media) {
-        if let imageURL = item.coverImage {
+        if let imageURL = item.coverImage?.image {
             imageView.kf.setImage(with: imageURL)
         }
         titleLabel.text = item.title
-        descriptionLabel.text = item.channelName
+        descriptionLabel.text = item.channelName.title
     }
     
     static func height(item: Series, width: CGFloat) -> CGFloat {
@@ -52,7 +52,7 @@ class MediaCollectionViewCell: UICollectionViewCell {
         var height: CGFloat = 0
         
         height += item.title.height(withWidth: textWidth, font: UIFont.robotoBold(size: 17))
-        height += item.channelName.height(withWidth: textWidth, font: UIFont.robotoBold(size: 13))
+        height += item.channelName.title.height(withWidth: textWidth, font: UIFont.robotoBold(size: 13))
         
         height += 230 // image hieght
         return height

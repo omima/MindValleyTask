@@ -10,7 +10,7 @@ import Foundation
 
 struct MediaWrapper : Codable {
     
-    var list : [Media]
+    var list : [Media]?
     
     enum CodingKeys : String , CodingKey {
         case list = "media"
